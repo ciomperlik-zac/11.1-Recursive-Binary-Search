@@ -13,11 +13,11 @@ public class Main{
     }
 
     public static int binarySearch(int[] array, int target, int left, int right) {
-        int mid = (left + right) / 2;
-
         if (left > right) {
             return -1;
         }
+
+        int mid = (left + right) / 2;
 
         if (target == array[mid]) {
             return mid;
