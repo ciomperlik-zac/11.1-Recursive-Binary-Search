@@ -8,11 +8,11 @@ public class Main{
         System.out.println("Target found at index: " + result);
     }
 
-    private static int binarySearch(int[] array, int target) {
+    public static int binarySearch(int[] array, int target) {
         return binarySearch(array, target, 0, array.length - 1);
     }
 
-    private static int binarySearch(int[] array, int target, int left, int right) {
+    public static int binarySearch(int[] array, int target, int left, int right) {
         int mid = (left + right) / 2;
 
         if (left > right) {
