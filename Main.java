@@ -6,7 +6,19 @@ public class Main{
         System.out.println("Target found at index: " + result);
     }
 
-    public static int binarySearch(int[] array, int target, int left, int right) {
-        
+    private static int binarySearch(int[] array, int target, int left, int right) {
+        int mid = (left + right) / 2;
+
+        if (left > right) {
+            return -1;
+        }
+
+        if (target == array[mid]) {
+            return mid;
+        } else if (target > array[mid]) {
+            return binarySearch(array, target, mid + 1, right);
+        } else {
+            return binarySearch(array, target, left, mid - 1);
+        }
     }
 }
